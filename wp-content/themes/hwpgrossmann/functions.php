@@ -1,8 +1,0 @@
-/*
-Theme Name: HWP Frank Grossmann 
-Author: raum3
-Author URI: https://raum3.de
-Description: Headless WordPress Theme 
-Version: 1.0
-Text Domain: hwpgrossmann
-*/
