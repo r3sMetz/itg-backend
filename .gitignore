@@ -1,0 +1,11 @@
+# Defaults
+.DS_Store
+
+# Environmental
+env.local.php
+
+# Node-context
+node_modules/
+
+# WordPress
+wp-content/uploads
