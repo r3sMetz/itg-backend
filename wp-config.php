@@ -24,7 +24,7 @@
 
 /** Dynamic WordPress Environmental Vars */
 // Production
-if(file_exists('env.production.php')){
+if(file_exists(__DIR__.'/env.production.php')){
 	require('env.production.php');
 }
 // Local
