@@ -1,7 +1,7 @@
 <?php
 /** Defaults */
 // WP-REST NAMESPACE
-defined('HWPGROSSMANN_REST_NAMESPACE') ||define('HWPGROSSMANN_REST_NAMESPACE','hwpgrossmann/v1');
+defined('HWPGROSSMANN_REST_NAMESPACE') ||define('HWPGROSSMANN_REST_NAMESPACE','hwpgrossmann/v2');
 
 
 /** Status Codes */
