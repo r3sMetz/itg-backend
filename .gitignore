@@ -4,6 +4,7 @@
 
 # Defaults
 .DS_Store
+.htaccess
 
 # Environmental
 env.local.php
