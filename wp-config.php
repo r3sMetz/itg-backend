@@ -22,41 +22,17 @@
  * @package WordPress
  */
 
-// ** MySQL-Einstellungen ** //
-/**   Diese Zugangsdaten bekommst du von deinem Webhoster. **/
+/** Dynamic WordPress Environmental Vars */
+// Production
+if(file_exists('env.production.php')){
+	require('env.production.php');
+}
+// Local
+else{
+	require('env.local.php');
+}
 
-/**
- * Ersetze datenbankname_hier_einfuegen
- * mit dem Namen der Datenbank, die du verwenden möchtest.
- */
-define( 'DB_NAME', 'hwpgrossmann_local' );
 
-/**
- * Ersetze benutzername_hier_einfuegen
- * mit deinem MySQL-Datenbank-Benutzernamen.
- */
-define( 'DB_USER', 'root' );
-
-/**
- * Ersetze passwort_hier_einfuegen mit deinem MySQL-Passwort.
- */
-define( 'DB_PASSWORD', 'root' );
-
-/**
- * Ersetze localhost mit der MySQL-Serveradresse.
- */
-define( 'DB_HOST', 'localhost' );
-
-/**
- * Der Datenbankzeichensatz, der beim Erstellen der
- * Datenbanktabellen verwendet werden soll
- */
-define( 'DB_CHARSET', 'utf8mb4' );
-
-/**
- * Der Collate-Type sollte nicht geändert werden.
- */
-define('DB_COLLATE', '');
 
 /**#@+
  * Sicherheitsschlüssel

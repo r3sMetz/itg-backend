@@ -2,7 +2,6 @@
 .idea/
 .vscode/
 
-
 # Defaults
 .DS_Store
 
@@ -14,3 +13,4 @@ node_modules/
 
 # WordPress
 wp-content/uploads
+env.local.php
