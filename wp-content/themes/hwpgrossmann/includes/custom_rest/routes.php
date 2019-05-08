@@ -1,7 +1,7 @@
 <?php
 /** Custom Rest Routes for hwpgrossmann */
 add_action( 'rest_api_init', function () {
-  // Get Options
+	// Get Options
   register_rest_route( HWPGROSSMANN_REST_NAMESPACE, 'options', array(
     'methods' => WP_REST_Server::READABLE,
     'callback' => 'handle_options',

@@ -7,7 +7,7 @@ function handle_submit( WP_REST_Request $request ) {
 	// If is authorized
 	if ( $hwpg_rest_request->is_authenticated() ) {
 		// Setup Data
-		$formData       = $request->get_body_params();
+		$formData       = json_decode($request->get_body(),true);
 		$sanitized_data = array(
 			"name"          => trim( $formData['name'] ),
 			"email"         => sanitize_email( $formData['email'] ),
@@ -23,7 +23,7 @@ function handle_submit( WP_REST_Request $request ) {
 		$message .= "Email: " . $sanitized_data['email'] . "\n\n";
 		$message .= "Nachricht: \n" . $sanitized_data['message'];
 
-		$success = wp_mail( $to, $subject, $message );
+		$success = $sanitized_data["check_privacy"] && wp_mail( $to, $subject, $message );
 
 
 		// Respond to Client

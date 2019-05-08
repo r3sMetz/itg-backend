@@ -8,7 +8,8 @@ class HWP_Grossmann_REST_Request{
 	// If Auth is Required -> Authenticate
 	if($authRequired){
 		$api_key = get_option('options_hwpgrossmann_api_key');
-		$key_from_request = $request->get_header('x-api-key');
+		$requestData = json_decode($request->get_body(),true);
+		$key_from_request = $requestData['api_key'];
 		$status_code_in_case_of_failure = $key_from_request ? HWPGROSSMANN_STATUS_NOT_AUTHORIZED : HWPGROSSMANN_STATUS_BAD_REQUEST;
 
 		$this->hasAccess = $api_key === $key_from_request;
