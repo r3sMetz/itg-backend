@@ -17,7 +17,7 @@ function handle_submit( WP_REST_Request $request ) {
 
 
 		// Sending Email
-		$to      = 'it-consulting-grossmann@t-online.de';
+		$to      = 'metz@raum3.de';
 		$subject = 'Neue Formularanfrage (it-consulting-grossmann.de)';
 		$message = "Von: " . $sanitized_data['name'] . "\n";
 		$message .= "Email: " . $sanitized_data['email'] . "\n\n";
